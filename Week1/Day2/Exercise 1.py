@@ -1,0 +1,9 @@
+my_fav_numbers={2,4,8,12,9,3}
+my_fav_numbers.add(15)
+my_fav_numbers.add(17)
+print(my_fav_numbers)
+my_fav_numbers.remove(15)
+print(my_fav_numbers)
+friend_fav_numbers={1,5,11,14}
+our_fav_numbers=my_fav_numbers.union(friend_fav_numbers)
+print(our_fav_numbers)
