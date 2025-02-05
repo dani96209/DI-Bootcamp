@@ -17,3 +17,5 @@ if affordable_items:
     print(f"You can afford: {affordable_items}")
 else:
     print("Nothing")
+
+

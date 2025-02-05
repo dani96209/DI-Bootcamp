@@ -34,4 +34,4 @@ more_on_zara={"creation_date": 1975,
 print(more_on_zara)
 brand.update(more_on_zara)
 print(brand)
-print(brand["number_stores"])
+print(brand["number_stores"]) # 10000 replace 2 for the number of store

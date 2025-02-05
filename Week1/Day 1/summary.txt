@@ -1,0 +1,6 @@
+Define the following values types:
+
+strings: it's a character 
+integers:it's a number 
+floats:
+booleans:
