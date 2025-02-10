@@ -1,0 +1,44 @@
+from Exercise4 import Family
+class TheIncredibles(Family):
+    def __init__(self, last_name):
+        super().__init__(last_name)  # Appel du constructeur de la classe parente Family
+
+    def born(self, **kwargs):
+        # Ajout des clés supplémentaires 'power' et 'incredible_name'
+        kwargs['power'] = kwargs.get('power', 'Unknown')  # Assurer qu'une power existe
+        kwargs['incredible_name'] = kwargs.get('incredible_name', 'Unknown')
+        super().born(**kwargs)  # Appel de la méthode 'born' de la classe parente
+
+    def use_power(self, name):
+        """Affiche le pouvoir d'un membre s'il est majeur. Lève une exception si le membre n'est pas majeur."""
+        for member in self.members:
+            if member['name'] == name:
+                if member['age'] >= 18:
+                    print(f"{member['incredible_name']} uses the power of {member['power']}!")
+                else:
+                    raise Exception(f"{name} is not over 18 years old. No power usage!")
+                return
+        raise Exception(f"Member {name} not found in the family!")
+
+    def incredible_presentation(self):
+        """Affiche les détails de la famille et appelle la présentation de la famille parente."""
+        print("Here is our powerful family:")
+        super().family_presentation()
+
+incredibles = TheIncredibles("Incredibles")
+
+# Ajout des membres
+incredibles.born(name="Michael", age=35, gender="Male", is_child=False, power="fly", incredible_name="MikeFly")
+incredibles.born(name="Sarah", age=32, gender="Female", is_child=False, power="read minds", incredible_name="SuperWoman")
+
+# Appel des méthodes
+incredibles.incredible_presentation()
+
+
+incredibles.incredible_presentation()
+
+# Utilisation de la méthode born pour ajouter Baby Jack
+incredibles.born(name="Jack", age=2, gender="Male", is_child=True, power="Unknown Power", incredible_name="BabyJack")
+
+# Appel à nouveau de la méthode incredible_presentation
+incredibles.incredible_presentation()
