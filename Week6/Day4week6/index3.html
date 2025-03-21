@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML Page</title>
+</head>
+<body>
+    <h1 id="main-title">Welcome to my dynamic page</h1>
+    <p>This is an HTML page with JavaScript.</p>
+    <ul>
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+    </ul>
+
+    <script>
+        // Dynamically change title text after page load
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("main-title").textContent = "Title modified by JavaScript 🎉";
+        });
+    </script>
+</body>
+</html>

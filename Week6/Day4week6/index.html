@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+</head>
+<body>
+    <h1>Open the browser console to see the output</h1>
+    
+    <script>
+        // Declaring variables with different data types
+        let myString = "Hello, JavaScript!"; // String
+        let myNumber = 42;                  // Number
+        let myBoolean = true;               // Boolean
+        let myUndefined;                    // Undefined
+        let myNull = null;                  // Null
+        let myObject = { name: "Alice", age: 30 }; // Object
+        let myArray = [1, 2, 3, 4];         // Array (Object type)
+
+        // Displaying variables and their types in the console
+        console.log("myString:", myString, "-", typeof myString);
+        console.log("myNumber:", myNumber, "-", typeof myNumber);
+        console.log("myBoolean:", myBoolean, "-", typeof myBoolean);
+        console.log("myUndefined:", myUndefined, "-", typeof myUndefined);
+        console.log("myNull:", myNull, "-", typeof myNull); // Warning: typeof null returns "object" (historical bug in JS)
+        console.log("myObject:", myObject, "-", typeof myObject);
+        console.log("myArray:", myArray, "-", typeof myArray); // typeof returns "object", but Array.isArray(myArray) checks if it's an array
+    </script>
+</body>
+</html>
